@@ -60,14 +60,14 @@ let wagesEarnedOnDate = function(dateSought){
 }
 
 let findEmployeeByFirstName = function(srcArray, firstName) {
-  return srcArray.find(function(rec){
-    return rec.firstName === firstName
+  return srcArray.find(function(record){
+    return record.firstName === firstName
   })
 }
 
 let calculatePayroll = function(arrayOfEmployeeRecords){
-    return arrayOfEmployeeRecords.reduce(function(memo, rec){
-        return memo + allWagesFor.call(rec)
+    return arrayOfEmployeeRecords.reduce(function(memo, record){
+        return memo + allWagesFor.call(record)
     }, 0)
 }
 /*
